@@ -3,17 +3,17 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int access;
+        String access;
 
         System.out.println("----- Mr. CALCULATOR -----");
 
         do {
             System.out.println("Do you want to perform a calculation ?");
-            System.out.println("If Yes, press --> 1.");
-            System.out.println("If No, press --> 0.");
-            access = scan.nextInt();
+            System.out.println("If Yes, press --> Yes.");
+            System.out.println("If No, press --> No.");
+            access = scan.nextLine().trim();
 
-            if (access == 0) {
+            if (access.equalsIgnoreCase("No")) {
                 System.out.println("----- Exiting the process. -----");
                 break;
             }
@@ -58,7 +58,7 @@ public class Calculator {
                     System.out.println("You have entered Invalid operator, Idiot !");
             }
 
-        } while (access == 1);
+        } while (access.equalsIgnoreCase("Yes"));
 
         scan.close();
     }
