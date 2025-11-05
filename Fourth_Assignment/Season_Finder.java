@@ -10,8 +10,8 @@ public class Season_Finder {
         
         do {
             System.out.println("Do you want to find season name?");
-            System.out.println("If Yes, press -> Yes");
-            System.out.println("If No, press -> No");
+            System.out.println("If Yes, press -> Yes.");
+            System.out.println("If No, press -> No.");
             access = scan.nextLine().trim();
             
             if (access.equalsIgnoreCase("No")) {
@@ -54,7 +54,7 @@ public class Season_Finder {
             }
             
             if (theSeason != null) {
-                System.out.println("According to your provided month, " + theSeason + " season exists.");
+                System.out.println("According to your provided month, " + theSeason + " season exists there.");
             } else {
                 System.out.println("You have provided an invalid month. Please provide a valid month, Idiot !");
             }
