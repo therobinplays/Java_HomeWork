@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Guess {
     int value;
+    int count=0;
 
     Guess(int value) 
     {
@@ -18,6 +19,8 @@ public class Guess {
         {
             System.out.print("Enter the secret number: ");
             int userInput = scan.nextInt();
+            count++;
+
 
             if (userInput > value) 
             {
@@ -35,7 +38,8 @@ public class Guess {
                 break;
             }
         }
-
+        
+        System.out.println("You have Guess the secret number in " + count + " Attempts.");
         scan.close();
     }
 
